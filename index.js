@@ -2,23 +2,12 @@
 
 
 const express = require('express');
-const router = express.Router();
 const cros = require('cors')
 
 const bodyparser = require('body-parser')
 const app = express()
 const port = 9000
 app.use(cros())
-
-
-router.get('/', function(req, res, next) {
-    res.send('API is working properly');
-});
-
-
-
-
-module.exports = router;
 
 
 app.use(bodyparser.urlencoded({extended: true}))
